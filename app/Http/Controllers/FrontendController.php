@@ -107,13 +107,13 @@ class FrontendController extends Controller
     public function downloadWhitepaper() {
         $filePath = public_path('assets/whitepaper.pdf'); // Adjust filename as needed
 
+        $filePath = public_path('trp_token_files/public/whitepaper.pdf');
         // Check if file exists
         if (!file_exists($filePath)) {
             return response()->json(['error' => 'File not found.'], 404);
         }
     
         // Download the file
-       $filePath = public_path('trp_token_files/public/whitepaper.pdf');
         return Response::download($filePath, 'trp-whitepaper.pdf', [
             'Content-Type' => 'application/pdf',
         ]);
