@@ -108,6 +108,7 @@ class FrontendController extends Controller
         $filePath = public_path('assets/whitepaper.pdf'); // Adjust filename as needed
 
         $filePath = public_path('/public/whitepaper.pdf');
+        return $filePath;
         // Check if file exists
         if (!file_exists($filePath)) {
             return response()->json(['error' => 'File not found.'], 404);
