@@ -113,6 +113,7 @@ class FrontendController extends Controller
         }
     
         // Download the file
+       $filePath = public_path('trp_token_files/public/whitepaper.pdf');
         return Response::download($filePath, 'trp-whitepaper.pdf', [
             'Content-Type' => 'application/pdf',
         ]);
