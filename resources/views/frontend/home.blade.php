@@ -751,14 +751,14 @@
                             </div>
                             <div class="social-links">
                                 <ul class="clearfix list-wrap">
-                                   
+
                                     <li>
                                         <a href="https://x.com/trumpcointoken" target="_blank">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                                 <path d="M9.52219 6.77491L15.4786 0H14.0671L8.89518 5.88256L4.76438 0H0L6.24657 8.89547L0 16H1.41155L6.87322 9.78779L11.2356 16H16L9.52219 6.77491ZM7.58888 8.97384L6.95597 8.08805L1.92015 1.03974H4.08821L8.15218 6.72796L8.78508 7.61374L14.0677 15.0076H11.8997L7.58888 8.97384Z" fill="currentColor"></path>
                                             </svg> </a>
                                     </li>
-                                  
+
                                     <li>
                                         <a href="https://t.me/TRP_Community" target="_blank">
                                             <i aria-hidden="true" class="fab fa-telegram-plane"></i> </a>
@@ -849,11 +849,16 @@
                         <div class="elementor-element elementor-element-b387ef4 e-con-full e-flex e-con e-child" data-id="b387ef4" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                             <div class="elementor-element elementor-element-0e0a34b elementor-widget elementor-widget-heading" data-id="0e0a34b" data-element_type="widget" data-widget_type="heading.default">
                                 <div class="elementor-widget-container">
-                                    <h2 class="elementor-heading-title elementor-size-default">ICO will start in..</h2>
+                                    <h2 class="elementor-heading-title elementor-size-default">Game will start in..</h2>
                                 </div>
                             </div>
                             <div class="elementor-element elementor-element-9fde14e elementor-widget elementor-widget-tg-progressbar" data-id="9fde14e" data-element_type="widget" data-widget_type="tg-progressbar.default">
                                 <div class="elementor-widget-container">
+
+                                    <!-- Game start -->
+                                 
+
+                                    <!-- Game end -->
 
                                     <div class="hero-countdown-wrap">
                                         <ul class="skill-feature_list mt-0">
@@ -900,7 +905,7 @@
 
 
                                     <div class="banner-countdown-wrap">
-                                        <div class="coming-time" data-countdown="2025/02/29 12:34:56"></div>
+                                        <div class="coming-time" data-countdown="2025/02/30 12:34:56"></div>
                                     </div>
 
                                 </div>
@@ -909,7 +914,399 @@
                     </div>
                 </div>
             </div>
-            <div class="elementor-element elementor-element-51f9021 e-flex e-con-boxed e-con e-parent" data-id="51f9021" data-element_type="container">
+
+            <section class="breadcrumb-area breadcrumb-bg " data-background="../wp-content/themes/iko/assets/img/bg/breadcrumb_bg.png" style="background-image: url(&quot;../wp-content/themes/iko/assets/img/bg/breadcrumb_bg.png&quot;);">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="breadcrumb-content">
+                            <div class="fall">
+
+<div class="walls">
+    <div class="wall">
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="ceil"></div>
+    </div>
+    <div class="wall">
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="ceil"></div>
+    </div>
+    <div class="wall">
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="ceil"></div>
+    </div>
+    <div class="wall">
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="ceil"></div>
+    </div>
+    <div class="wall">
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="ceil"></div>
+    </div>
+    <div class="wall">
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="ceil"></div>
+    </div>
+    <div class="wall">
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="ceil"></div>
+    </div>
+    <div class="wall">
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="ceil"></div>
+    </div>
+    <div class="wall">
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="ceil"></div>
+    </div>
+    <div class="wall">
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="ceil"></div>
+    </div>
+</div>
+
+<div class="ballArm">
+    <div class="ball"></div>
+</div>
+</div>
+
+<style>
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+
+
+.fall {
+    position: relative;
+    transform-style: preserve-3d;
+    animation: fallRotate 42s infinite linear;
+}
+
+@keyframes fallRotate {
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+.wall {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    transform-style: preserve-3d;
+    background-image: linear-gradient(#0007, #000c);
+    animation: move 15s infinite linear;
+}
+
+.wall:nth-child(odd) {
+    left: -10px;
+    transform: translate(-50%, 50%) rotateY(90deg) rotateX(45deg) translateZ(-20px) translateY(-220px);
+}
+
+.wall:nth-child(even) {
+    left: 10px;
+    transform: translate(-50%, 50%) rotateY(-90deg) rotateX(45deg) translateZ(-20px) translateY(-220px);
+}
+
+.wall:nth-child(1) {
+    animation-delay: -1.5s;
+    background-color: hsla(0, 75%, 75%, 1);
+}
+
+.wall:nth-child(2) {
+    animation-delay: -3s;
+    background-color: hsla(36, 75%, 75%, 1);
+}
+
+.wall:nth-child(3) {
+    animation-delay: -4.5s;
+    background-color: hsla(72, 75%, 75%, 1);
+}
+
+.wall:nth-child(4) {
+    animation-delay: -6s;
+    background-color: hsla(108, 75%, 75%, 1);
+}
+
+.wall:nth-child(5) {
+    animation-delay: -7.5s;
+    background-color: hsla(144, 75%, 75%, 1);
+}
+
+.wall:nth-child(6) {
+    animation-delay: -9s;
+    background-color: hsla(180, 75%, 75%, 1);
+}
+
+.wall:nth-child(7) {
+    animation-delay: -10.5s;
+    background-color: hsla(216, 75%, 75%, 1);
+}
+
+.wall:nth-child(8) {
+    animation-delay: -12s;
+    background-color: hsla(252, 75%, 75%, 1);
+}
+
+.wall:nth-child(9) {
+    animation-delay: -13.5s;
+    background-color: hsla(288, 75%, 75%, 1);
+}
+
+.wall:nth-child(10) {
+    animation-delay: -15s;
+    background-color: hsla(324, 75%, 75%, 1);
+}
+
+.wall {
+    bottom: -210px;
+}
+
+@keyframes move {
+    from {
+        bottom: -1210px;
+    }
+
+    to {
+        bottom: 810px;
+    }
+}
+
+.wall>div {
+    position: absolute;
+    background-color: inherit;
+}
+
+.wall .ceil {
+    width: 80px;
+    height: 80px;
+    background-image: linear-gradient(#fff7, #fff0);
+    animation: wallCeil 15s infinite linear;
+    animation-delay: inherit;
+    overflow: hidden;
+}
+
+.wall .ceil::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(#000, #0000 50%);
+    animation: shadow 15s infinite linear;
+    animation-delay: inherit;
+}
+
+@keyframes shadow {
+
+    0%,
+    48%,
+    53%,
+    100% {
+        opacity: 0;
+        transform: translateY(80px) scale(2);
+    }
+
+    50% {
+        opacity: 0.25;
+        transform: translateY(4px) scale(0.5);
+    }
+}
+
+.wall .top {
+    width: 80px;
+    transform: rotateX(90deg);
+    transform-origin: top;
+    background-image: linear-gradient(#0007, #fff7);
+    animation: wallHeight 15s infinite linear;
+    animation-delay: inherit;
+}
+
+.wall .bottom {
+    bottom: 0;
+    width: 80px;
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+    background-image: linear-gradient(#fff0, #000c);
+    animation: wallHeight 15s infinite linear;
+    animation-delay: inherit;
+}
+
+.wall .left {
+    bottom: 0;
+    height: 80px;
+    transform: rotateY(-90deg);
+    transform-origin: left;
+    background-image: linear-gradient(to bottom left, #fff3, #000c);
+    animation: wallWidth 15s infinite linear;
+    animation-delay: inherit;
+}
+
+.wall .right {
+    bottom: 0;
+    right: 0;
+    height: 80px;
+    transform: rotateY(90deg);
+    transform-origin: right;
+    background-image: linear-gradient(to bottom right, #fff3, #000c);
+    animation: wallWidth 15s infinite linear;
+    animation-delay: inherit;
+}
+
+@keyframes wallCeil {
+
+    0%,
+    49.75%,
+    55%,
+    100% {
+        transform: translateZ(20px);
+    }
+
+    50% {
+        transform: translateZ(10px);
+    }
+}
+
+@keyframes wallHeight {
+
+    0%,
+    49.75%,
+    55%,
+    100% {
+        height: 20px;
+    }
+
+    50% {
+        height: 10px;
+    }
+}
+
+@keyframes wallWidth {
+
+    0%,
+    49.75%,
+    55%,
+    100% {
+        width: 20px;
+    }
+
+    50% {
+        width: 10px;
+    }
+}
+
+.ballArm {
+    position: absolute;
+    bottom: -210px;
+    width: 20px;
+    height: 240px;
+    transform-origin: bottom;
+    transform-style: preserve-3d;
+    animation: armRotate 1.5s infinite linear alternate;
+}
+
+@keyframes armRotate {
+    from {
+        transform: translateX(-50%) rotate(-45deg);
+    }
+
+    to {
+        transform: translateX(-50%) rotate(45deg);
+    }
+}
+
+.ball {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 10%;
+    transform-style: preserve-3d;
+    animation: ballRotateZ 1.5s infinite linear alternate;
+}
+
+@keyframes ballRotateZ {
+    from {
+        transform: rotate(45deg);
+    }
+
+    to {
+        transform: rotate(-45deg);
+    }
+}
+
+.ball::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: radial-gradient(circle at top, #fff, #222);
+    border-radius: 50%;
+    animation: ballRotateY 42s infinite linear;
+}
+
+@keyframes ballRotateY {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(-360deg);
+    }
+}
+</style>
+                                <h1 class="title"> <span style="font-family: 'Doto', sans-serif;font-optical-sizing: auto;font-weight: 800;font-style: bold;font-variation-settings:'ROND' 0;">Get Ready for Our Exclusive Telegram Game! </span>🎮🚀</h1>
+                                <nav aria-label="breadcrumb" class="breadcrumb">
+                                    <!-- Breadcrumb NavXT 7.3.1 -->
+                                    <span property="itemListElement" typeof="ListItem"><span>We’re excited to announce that we’ll soon be launching an interactive Telegram game designed to boost community engagement and reward our loyal players! In this game, you'll get the chance to join thrilling challenges, test your skills, and win amazing rewards as you level up.</span>
+                                        <meta property="position" content="1">
+                                    </span>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="breadcrumb-shape-wrap">
+
+                    <img src="../wp-content/themes/iko/assets/img/images/breadcrumb_shape02.png" width='50px' alt="Shape" class="alltuchtopdown">
+
+                    <img src="../wp-content/themes/iko/assets/img/images/breadcrumb_shape02.png" alt="Shape" class="rotateme">
+
+                </div>
+            </section>
+            <!-- <div class="elementor-element elementor-element-51f9021 e-flex e-con-boxed e-con e-parent" data-id="51f9021" data-element_type="container">
                 <div class="e-con-inner">
                     <div class="elementor-element elementor-element-49ce3ed elementor-widget__width-auto brand-title elementor-widget elementor-widget-heading" data-id="49ce3ed" data-element_type="widget" data-widget_type="heading.default">
                         <div class="elementor-widget-container">
@@ -958,7 +1355,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="elementor-element elementor-element-cbe67ad e-con-full e-flex e-con e-parent" data-id="cbe67ad" data-element_type="container" id="feature">
                 <div class="elementor-element elementor-element-b377ce2 elementor-absolute elementor-widget elementor-widget-tg-gradient" data-id="b377ce2" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="tg-gradient.default">
                     <div class="elementor-widget-container">
@@ -1581,7 +1978,7 @@
                         <div class="e-con-inner">
                             <div class="elementor-element elementor-element-033d538 elementor-widget elementor-widget-heading" data-id="033d538" data-element_type="widget" data-widget_type="heading.default">
                                 <div class="elementor-widget-container">
-                                    <h2 class="elementor-heading-title elementor-size-default">Major Listing Platforms</h2>
+                                    <h2 class="elementor-heading-title elementor-size-default">Soon to be listed on notable exchanges.</h2>
                                 </div>
                             </div>
                         </div>
@@ -1643,10 +2040,10 @@
                     </div>
                 </div>
 
-               
+
                 <div id='whitepaper' class="document-wrap">
                     <h3 class="title">Our Whitepaper</h3>
-                    
+
                     <ul class="list-wrap">
                         <li>
                             <a href="#" target="_blank">
@@ -1654,7 +2051,7 @@
                                     <i aria-hidden="true" class="fas fa-file-pdf"></i> </span>
                             </a>
                         </li>
-                      
+
                     </ul>
                     <a href="/downloadWhitepaper" target="_blank" download="" class="btn">Download Now</a>
                 </div>
@@ -1778,11 +2175,11 @@
                                     <div class="accordion-card ">
                                         <h2 class="accordion-header" id="headingOne-1">
                                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne-1" aria-expanded="true" aria-controls="collapseOne-1">
-                                                <span class="number">2</span> How can I participate in the ICO? </button>
+                                                <span class="number">2</span> What to expect from our soon to launch game? </button>
                                         </h2>
                                         <div id="collapseOne-1" class="accordion-collapse collapse " aria-labelledby="headingOne-1" data-bs-parent="#faqAccordion">
                                             <div class="accordion-body">
-                                                <p>Simply register, deposit funds, and buy TRP tokens on our ICO platform during the ICO period.</p>
+                                                <p>Fun Challenges, Real rewards, Community Leaderboard, Special Events.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -1806,7 +2203,7 @@
                                         </h2>
                                         <div id="collapseOne-3" class="accordion-collapse collapse " aria-labelledby="headingOne-3" data-bs-parent="#faqAccordion">
                                             <div class="accordion-body">
-                                                <p>TRP can be stored in any compatible digital wallet.</p>
+                                                <p>All Solona based wallet is supported.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -1832,7 +2229,7 @@
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                             <path d="M9.52219 6.77491L15.4786 0H14.0671L8.89518 5.88256L4.76438 0H0L6.24657 8.89547L0 16H1.41155L6.87322 9.78779L11.2356 16H16L9.52219 6.77491ZM7.58888 8.97384L6.95597 8.08805L1.92015 1.03974H4.08821L8.15218 6.72796L8.78508 7.61374L14.0677 15.0076H11.8997L7.58888 8.97384Z" fill="currentColor"></path>
                                         </svg> </a>
-                                  
+
 
 
                                     <a href="https://discord.gg/ksrWcrUaqV">
