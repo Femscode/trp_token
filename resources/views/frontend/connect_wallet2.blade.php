@@ -1518,7 +1518,7 @@
                     disconnectWalletButton.addClass('d-none');
                 });
             } else {
-                alert("Please install MetaMask or another Ethereum wallet provider to use this feature.");
+                alert("Please install Phantom or another Solana based wallet provider as an extension to use this feature.");
             }
         });
     </script>
