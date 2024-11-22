@@ -1598,17 +1598,23 @@
         const disconnectWalletButton = $('#disconnectWalletButton');
 
         async function connectToWallet(walletName) {
+            $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
             try {
                 let walletAddress = null;
 
                 if (walletName === 'Phantom' && window.solana && window.solana.isPhantom) {
                     // Connect to Phantom Wallet
                     const resp = await window.solana.connect();
+                    console.log(resp)
                     walletAddress = resp.publicKey.toString();
                 } else if (walletName === 'Solflare' && window.solflare && window.solflare.isSolflare) {
                     // Connect to Solflare Wallet
                     const resp = await window.solflare.connect();
-                    walletAddress = resp.publicKey.toString();
+                   walletAddress = resp.publicKey.toString();
                 } else if (walletName === 'Ledger') {
                     // Connect to Ledger Wallet
                     // (This is just an example. You would need additional setup for Ledger hardware wallet)
@@ -1633,7 +1639,7 @@
                     })
                     .done(function(response) {
                         Swal.fire('Wallet Connected', 'Wallet Connected Successfully', 'success');
-                        location.reload();
+                        // location.reload();
                     })
                     .fail(function(jqXHR, textStatus, errorThrown) {
                         Swal.fire('Wallet Not Connected', 'Try again later!', 'error');
