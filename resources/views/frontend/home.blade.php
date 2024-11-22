@@ -13,6 +13,283 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <style>
+        .fall {
+            position: relative;
+            transform-style: preserve-3d;
+            animation: fallRotate 42s infinite linear;
+        }
+
+        @keyframes fallRotate {
+            to {
+                transform: rotateY(360deg);
+            }
+        }
+
+        .wall {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            transform-style: preserve-3d;
+            background-image: linear-gradient(#0007, #000c);
+            animation: move 15s infinite linear;
+        }
+
+        .wall:nth-child(odd) {
+            left: -10px;
+            transform: translate(-50%, 50%) rotateY(90deg) rotateX(45deg) translateZ(-20px) translateY(-220px);
+        }
+
+        .wall:nth-child(even) {
+            left: 10px;
+            transform: translate(-50%, 50%) rotateY(-90deg) rotateX(45deg) translateZ(-20px) translateY(-220px);
+        }
+
+        .wall:nth-child(1) {
+            animation-delay: -1.5s;
+            background-color: hsla(0, 75%, 75%, 1);
+        }
+
+        .wall:nth-child(2) {
+            animation-delay: -3s;
+            background-color: hsla(36, 75%, 75%, 1);
+        }
+
+        .wall:nth-child(3) {
+            animation-delay: -4.5s;
+            background-color: hsla(72, 75%, 75%, 1);
+        }
+
+        .wall:nth-child(4) {
+            animation-delay: -6s;
+            background-color: hsla(108, 75%, 75%, 1);
+        }
+
+        .wall:nth-child(5) {
+            animation-delay: -7.5s;
+            background-color: hsla(144, 75%, 75%, 1);
+        }
+
+        .wall:nth-child(6) {
+            animation-delay: -9s;
+            background-color: hsla(180, 75%, 75%, 1);
+        }
+
+        .wall:nth-child(7) {
+            animation-delay: -10.5s;
+            background-color: hsla(216, 75%, 75%, 1);
+        }
+
+        .wall:nth-child(8) {
+            animation-delay: -12s;
+            background-color: hsla(252, 75%, 75%, 1);
+        }
+
+        .wall:nth-child(9) {
+            animation-delay: -13.5s;
+            background-color: hsla(288, 75%, 75%, 1);
+        }
+
+        .wall:nth-child(10) {
+            animation-delay: -15s;
+            background-color: hsla(324, 75%, 75%, 1);
+        }
+
+        .wall {
+            bottom: -210px;
+        }
+
+        @keyframes move {
+            from {
+                bottom: -1210px;
+            }
+
+            to {
+                bottom: 810px;
+            }
+        }
+
+        .wall>div {
+            position: absolute;
+            background-color: inherit;
+        }
+
+        .wall .ceil {
+            width: 80px;
+            height: 80px;
+            background-image: linear-gradient(#fff7, #fff0);
+            animation: wallCeil 15s infinite linear;
+            animation-delay: inherit;
+            overflow: hidden;
+        }
+
+        .wall .ceil::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(#000, #0000 50%);
+            animation: shadow 15s infinite linear;
+            animation-delay: inherit;
+        }
+
+        @keyframes shadow {
+
+            0%,
+            48%,
+            53%,
+            100% {
+                opacity: 0;
+                transform: translateY(80px) scale(2);
+            }
+
+            50% {
+                opacity: 0.25;
+                transform: translateY(4px) scale(0.5);
+            }
+        }
+
+        .wall .top {
+            width: 80px;
+            transform: rotateX(90deg);
+            transform-origin: top;
+            background-image: linear-gradient(#0007, #fff7);
+            animation: wallHeight 15s infinite linear;
+            animation-delay: inherit;
+        }
+
+        .wall .bottom {
+            bottom: 0;
+            width: 80px;
+            transform: rotateX(-90deg);
+            transform-origin: bottom;
+            background-image: linear-gradient(#fff0, #000c);
+            animation: wallHeight 15s infinite linear;
+            animation-delay: inherit;
+        }
+
+        .wall .left {
+            bottom: 0;
+            height: 80px;
+            transform: rotateY(-90deg);
+            transform-origin: left;
+            background-image: linear-gradient(to bottom left, #fff3, #000c);
+            animation: wallWidth 15s infinite linear;
+            animation-delay: inherit;
+        }
+
+        .wall .right {
+            bottom: 0;
+            right: 0;
+            height: 80px;
+            transform: rotateY(90deg);
+            transform-origin: right;
+            background-image: linear-gradient(to bottom right, #fff3, #000c);
+            animation: wallWidth 15s infinite linear;
+            animation-delay: inherit;
+        }
+
+        @keyframes wallCeil {
+
+            0%,
+            49.75%,
+            55%,
+            100% {
+                transform: translateZ(20px);
+            }
+
+            50% {
+                transform: translateZ(10px);
+            }
+        }
+
+        @keyframes wallHeight {
+
+            0%,
+            49.75%,
+            55%,
+            100% {
+                height: 20px;
+            }
+
+            50% {
+                height: 10px;
+            }
+        }
+
+        @keyframes wallWidth {
+
+            0%,
+            49.75%,
+            55%,
+            100% {
+                width: 20px;
+            }
+
+            50% {
+                width: 10px;
+            }
+        }
+
+        .ballArm {
+            position: absolute;
+            bottom: -210px;
+            width: 20px;
+            height: 240px;
+            transform-origin: bottom;
+            transform-style: preserve-3d;
+            animation: armRotate 1.5s infinite linear alternate;
+        }
+
+        @keyframes armRotate {
+            from {
+                transform: translateX(-50%) rotate(-45deg);
+            }
+
+            to {
+                transform: translateX(-50%) rotate(45deg);
+            }
+        }
+
+        .ball {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 10%;
+            transform-style: preserve-3d;
+            animation: ballRotateZ 1.5s infinite linear alternate;
+        }
+
+        @keyframes ballRotateZ {
+            from {
+                transform: rotate(45deg);
+            }
+
+            to {
+                transform: rotate(-45deg);
+            }
+        }
+
+        .ball::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-image: radial-gradient(circle at top, #fff, #222);
+            border-radius: 50%;
+            animation: ballRotateY 42s infinite linear;
+        }
+
+        @keyframes ballRotateY {
+            from {
+                transform: rotateY(0deg);
+            }
+
+            to {
+                transform: rotateY(-360deg);
+            }
+        }
+    </style>
     <script type="text/javascript">
         /* <![CDATA[ */
         window._wpemojiSettings = {
@@ -857,14 +1134,14 @@
 
 
                                     <div class="hero-countdown-wrap">
-                                       
+
                                         <div class="skill-feature">
                                             <div class="progress">
                                                 <div class="progress-bar"></div>
                                             </div>
                                             <div class="progress-value-max"></div>
                                         </div>
-                                      
+
                                     </div>
 
                                 </div>
@@ -906,366 +1183,87 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="breadcrumb-content">
-                            <div class="fall">
+                                <div class="fall">
 
-<div class="walls">
-    <div class="wall">
-        <div class="top"></div>
-        <div class="bottom"></div>
-        <div class="left"></div>
-        <div class="right"></div>
-        <div class="ceil"></div>
-    </div>
-    <div class="wall">
-        <div class="top"></div>
-        <div class="bottom"></div>
-        <div class="left"></div>
-        <div class="right"></div>
-        <div class="ceil"></div>
-    </div>
-    <div class="wall">
-        <div class="top"></div>
-        <div class="bottom"></div>
-        <div class="left"></div>
-        <div class="right"></div>
-        <div class="ceil"></div>
-    </div>
-    <div class="wall">
-        <div class="top"></div>
-        <div class="bottom"></div>
-        <div class="left"></div>
-        <div class="right"></div>
-        <div class="ceil"></div>
-    </div>
-    <div class="wall">
-        <div class="top"></div>
-        <div class="bottom"></div>
-        <div class="left"></div>
-        <div class="right"></div>
-        <div class="ceil"></div>
-    </div>
-    <div class="wall">
-        <div class="top"></div>
-        <div class="bottom"></div>
-        <div class="left"></div>
-        <div class="right"></div>
-        <div class="ceil"></div>
-    </div>
-    <div class="wall">
-        <div class="top"></div>
-        <div class="bottom"></div>
-        <div class="left"></div>
-        <div class="right"></div>
-        <div class="ceil"></div>
-    </div>
-    <div class="wall">
-        <div class="top"></div>
-        <div class="bottom"></div>
-        <div class="left"></div>
-        <div class="right"></div>
-        <div class="ceil"></div>
-    </div>
-    <div class="wall">
-        <div class="top"></div>
-        <div class="bottom"></div>
-        <div class="left"></div>
-        <div class="right"></div>
-        <div class="ceil"></div>
-    </div>
-    <div class="wall">
-        <div class="top"></div>
-        <div class="bottom"></div>
-        <div class="left"></div>
-        <div class="right"></div>
-        <div class="ceil"></div>
-    </div>
-</div>
+                                    <div class="walls">
+                                        <div class="wall">
+                                            <div class="top"></div>
+                                            <div class="bottom"></div>
+                                            <div class="left"></div>
+                                            <div class="right"></div>
+                                            <div class="ceil"></div>
+                                        </div>
+                                        <div class="wall">
+                                            <div class="top"></div>
+                                            <div class="bottom"></div>
+                                            <div class="left"></div>
+                                            <div class="right"></div>
+                                            <div class="ceil"></div>
+                                        </div>
+                                        <div class="wall">
+                                            <div class="top"></div>
+                                            <div class="bottom"></div>
+                                            <div class="left"></div>
+                                            <div class="right"></div>
+                                            <div class="ceil"></div>
+                                        </div>
+                                        <div class="wall">
+                                            <div class="top"></div>
+                                            <div class="bottom"></div>
+                                            <div class="left"></div>
+                                            <div class="right"></div>
+                                            <div class="ceil"></div>
+                                        </div>
+                                        <div class="wall">
+                                            <div class="top"></div>
+                                            <div class="bottom"></div>
+                                            <div class="left"></div>
+                                            <div class="right"></div>
+                                            <div class="ceil"></div>
+                                        </div>
+                                        <div class="wall">
+                                            <div class="top"></div>
+                                            <div class="bottom"></div>
+                                            <div class="left"></div>
+                                            <div class="right"></div>
+                                            <div class="ceil"></div>
+                                        </div>
+                                        <div class="wall">
+                                            <div class="top"></div>
+                                            <div class="bottom"></div>
+                                            <div class="left"></div>
+                                            <div class="right"></div>
+                                            <div class="ceil"></div>
+                                        </div>
+                                        <div class="wall">
+                                            <div class="top"></div>
+                                            <div class="bottom"></div>
+                                            <div class="left"></div>
+                                            <div class="right"></div>
+                                            <div class="ceil"></div>
+                                        </div>
+                                        <div class="wall">
+                                            <div class="top"></div>
+                                            <div class="bottom"></div>
+                                            <div class="left"></div>
+                                            <div class="right"></div>
+                                            <div class="ceil"></div>
+                                        </div>
+                                        <div class="wall">
+                                            <div class="top"></div>
+                                            <div class="bottom"></div>
+                                            <div class="left"></div>
+                                            <div class="right"></div>
+                                            <div class="ceil"></div>
+                                        </div>
+                                    </div>
 
-<div class="ballArm">
-    <div class="ball"></div>
-</div>
-</div>
-
-<style>
+                                    <div class="ballArm">
+                                        <div class="ball"></div>
+                                    </div>
+                                </div>
 
 
-
-.fall {
-    position: relative;
-    transform-style: preserve-3d;
-    animation: fallRotate 42s infinite linear;
-}
-
-@keyframes fallRotate {
-    to {
-        transform: rotateY(360deg);
-    }
-}
-
-.wall {
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    transform-style: preserve-3d;
-    background-image: linear-gradient(#0007, #000c);
-    animation: move 15s infinite linear;
-}
-
-.wall:nth-child(odd) {
-    left: -10px;
-    transform: translate(-50%, 50%) rotateY(90deg) rotateX(45deg) translateZ(-20px) translateY(-220px);
-}
-
-.wall:nth-child(even) {
-    left: 10px;
-    transform: translate(-50%, 50%) rotateY(-90deg) rotateX(45deg) translateZ(-20px) translateY(-220px);
-}
-
-.wall:nth-child(1) {
-    animation-delay: -1.5s;
-    background-color: hsla(0, 75%, 75%, 1);
-}
-
-.wall:nth-child(2) {
-    animation-delay: -3s;
-    background-color: hsla(36, 75%, 75%, 1);
-}
-
-.wall:nth-child(3) {
-    animation-delay: -4.5s;
-    background-color: hsla(72, 75%, 75%, 1);
-}
-
-.wall:nth-child(4) {
-    animation-delay: -6s;
-    background-color: hsla(108, 75%, 75%, 1);
-}
-
-.wall:nth-child(5) {
-    animation-delay: -7.5s;
-    background-color: hsla(144, 75%, 75%, 1);
-}
-
-.wall:nth-child(6) {
-    animation-delay: -9s;
-    background-color: hsla(180, 75%, 75%, 1);
-}
-
-.wall:nth-child(7) {
-    animation-delay: -10.5s;
-    background-color: hsla(216, 75%, 75%, 1);
-}
-
-.wall:nth-child(8) {
-    animation-delay: -12s;
-    background-color: hsla(252, 75%, 75%, 1);
-}
-
-.wall:nth-child(9) {
-    animation-delay: -13.5s;
-    background-color: hsla(288, 75%, 75%, 1);
-}
-
-.wall:nth-child(10) {
-    animation-delay: -15s;
-    background-color: hsla(324, 75%, 75%, 1);
-}
-
-.wall {
-    bottom: -210px;
-}
-
-@keyframes move {
-    from {
-        bottom: -1210px;
-    }
-
-    to {
-        bottom: 810px;
-    }
-}
-
-.wall>div {
-    position: absolute;
-    background-color: inherit;
-}
-
-.wall .ceil {
-    width: 80px;
-    height: 80px;
-    background-image: linear-gradient(#fff7, #fff0);
-    animation: wallCeil 15s infinite linear;
-    animation-delay: inherit;
-    overflow: hidden;
-}
-
-.wall .ceil::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: radial-gradient(#000, #0000 50%);
-    animation: shadow 15s infinite linear;
-    animation-delay: inherit;
-}
-
-@keyframes shadow {
-
-    0%,
-    48%,
-    53%,
-    100% {
-        opacity: 0;
-        transform: translateY(80px) scale(2);
-    }
-
-    50% {
-        opacity: 0.25;
-        transform: translateY(4px) scale(0.5);
-    }
-}
-
-.wall .top {
-    width: 80px;
-    transform: rotateX(90deg);
-    transform-origin: top;
-    background-image: linear-gradient(#0007, #fff7);
-    animation: wallHeight 15s infinite linear;
-    animation-delay: inherit;
-}
-
-.wall .bottom {
-    bottom: 0;
-    width: 80px;
-    transform: rotateX(-90deg);
-    transform-origin: bottom;
-    background-image: linear-gradient(#fff0, #000c);
-    animation: wallHeight 15s infinite linear;
-    animation-delay: inherit;
-}
-
-.wall .left {
-    bottom: 0;
-    height: 80px;
-    transform: rotateY(-90deg);
-    transform-origin: left;
-    background-image: linear-gradient(to bottom left, #fff3, #000c);
-    animation: wallWidth 15s infinite linear;
-    animation-delay: inherit;
-}
-
-.wall .right {
-    bottom: 0;
-    right: 0;
-    height: 80px;
-    transform: rotateY(90deg);
-    transform-origin: right;
-    background-image: linear-gradient(to bottom right, #fff3, #000c);
-    animation: wallWidth 15s infinite linear;
-    animation-delay: inherit;
-}
-
-@keyframes wallCeil {
-
-    0%,
-    49.75%,
-    55%,
-    100% {
-        transform: translateZ(20px);
-    }
-
-    50% {
-        transform: translateZ(10px);
-    }
-}
-
-@keyframes wallHeight {
-
-    0%,
-    49.75%,
-    55%,
-    100% {
-        height: 20px;
-    }
-
-    50% {
-        height: 10px;
-    }
-}
-
-@keyframes wallWidth {
-
-    0%,
-    49.75%,
-    55%,
-    100% {
-        width: 20px;
-    }
-
-    50% {
-        width: 10px;
-    }
-}
-
-.ballArm {
-    position: absolute;
-    bottom: -210px;
-    width: 20px;
-    height: 240px;
-    transform-origin: bottom;
-    transform-style: preserve-3d;
-    animation: armRotate 1.5s infinite linear alternate;
-}
-
-@keyframes armRotate {
-    from {
-        transform: translateX(-50%) rotate(-45deg);
-    }
-
-    to {
-        transform: translateX(-50%) rotate(45deg);
-    }
-}
-
-.ball {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border-radius: 10%;
-    transform-style: preserve-3d;
-    animation: ballRotateZ 1.5s infinite linear alternate;
-}
-
-@keyframes ballRotateZ {
-    from {
-        transform: rotate(45deg);
-    }
-
-    to {
-        transform: rotate(-45deg);
-    }
-}
-
-.ball::after {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-image: radial-gradient(circle at top, #fff, #222);
-    border-radius: 50%;
-    animation: ballRotateY 42s infinite linear;
-}
-
-@keyframes ballRotateY {
-    from {
-        transform: rotateY(0deg);
-    }
-
-    to {
-        transform: rotateY(-360deg);
-    }
-}
-</style>
                                 <h1 class="title"> <span style="font-family: 'Doto', sans-serif;font-optical-sizing: auto;font-weight: 800;font-style: bold;font-variation-settings:'ROND' 0;">Get Ready for Our Exclusive Telegram Game! </span>🎮🚀</h1>
                                 <nav aria-label="breadcrumb" class="breadcrumb">
                                     <!-- Breadcrumb NavXT 7.3.1 -->
