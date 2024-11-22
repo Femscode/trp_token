@@ -855,30 +855,16 @@
                             <div class="elementor-element elementor-element-9fde14e elementor-widget elementor-widget-tg-progressbar" data-id="9fde14e" data-element_type="widget" data-widget_type="tg-progressbar.default">
                                 <div class="elementor-widget-container">
 
-                                    <!-- Game start -->
-                                 
-
-                                    <!-- Game end -->
 
                                     <div class="hero-countdown-wrap">
-                                        <ul class="skill-feature_list mt-0">
-                                            <li><span>Onboarding</span></li>
-                                            <li><span>Pre sale</span></li>
-                                            <li>
-                                                <h4>ICO</h4>
-                                            </li>
-                                        </ul>
+                                       
                                         <div class="skill-feature">
                                             <div class="progress">
                                                 <div class="progress-bar"></div>
                                             </div>
-                                            <div class="progress-value-max">Two(2) Billion TRP</div>
+                                            <div class="progress-value-max"></div>
                                         </div>
-                                        <!-- <ul class="skill-feature_list style2 mb-0">
-                                            <li></li>
-                                            <li></li>
-                                            <li>Ten(10) Billion TRP</li>
-                                        </ul> -->
+                                      
                                     </div>
 
                                 </div>
