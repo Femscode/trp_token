@@ -19,6 +19,7 @@ class FrontendController extends Controller
     public function connect_wallet()
     {
        
+        
         $data['connected_address'] = Session::get('connected_address');
         
         return view('frontend.connect_wallet2', $data);

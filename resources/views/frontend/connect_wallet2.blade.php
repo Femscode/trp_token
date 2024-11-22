@@ -963,11 +963,11 @@
                                     <div class="accordion-card ">
                                         <h2 class="accordion-header" id="headingOne-1">
                                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne-1" aria-expanded="true" aria-controls="collapseOne-1">
-                                                <span class="number">2</span> How can I participate in the ICO? </button>
+                                                <span class="number">2</span> What to expect from our soon to launch game? </button>
                                         </h2>
                                         <div id="collapseOne-1" class="accordion-collapse collapse " aria-labelledby="headingOne-1" data-bs-parent="#faqAccordion">
                                             <div class="accordion-body">
-                                                <p>Simply register, deposit funds, and buy TRP tokens on our ICO platform during the ICO period.</p>
+                                                <p>Fun Challenges, Real rewards, Community Leaderboard, Special Events.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -991,7 +991,7 @@
                                         </h2>
                                         <div id="collapseOne-3" class="accordion-collapse collapse " aria-labelledby="headingOne-3" data-bs-parent="#faqAccordion">
                                             <div class="accordion-body">
-                                                <p>TRP can be stored in any compatible digital wallet that supports.</p>
+                                                <p>All Solona based wallet is supported.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -1464,7 +1464,7 @@
     </script>
     <script type="text/javascript" src="wp-content/plugins/elementor/assets/js/frontend.min52dd.js?ver=3.24.7" id="elementor-frontend-js"></script>
 
-    <script>
+    <!-- <script>
         $(document).ready(function() {
             const walletAddressElement = $('#walletAddress');
             const connectWalletButton = $('#connectWalletButton');
@@ -1521,7 +1521,162 @@
                 alert("Please install Phantom or another Solana based wallet provider as an extension to use this feature.");
             }
         });
-    </script>
+    </script> -->
+   <!-- Include Solana's web3.js -->
+<script src="https://unpkg.com/@solana/web3.js@1.70.0/lib/index.iife.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> For SweetAlert
+
+<script>
+    $(document).ready(function () {
+        const walletAddressElement = $('#walletAddress');
+        const connectWalletButton = $('#connectWalletButton');
+        const disconnectWalletButton = $('#disconnectWalletButton');
+
+        async function connectToPhantom() {
+            try {
+                $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+                const resp = await window.solana.connect(); 
+                const walletAddress = resp.publicKey.toString();
+                
+                walletAddressElement.text("Connected Wallet: " + walletAddress);
+                connectWalletButton.addClass('d-none');
+                disconnectWalletButton.removeClass('d-none');
+
+                
+                $.post("connect_wallet_address", {
+                    type: 'Phantom',
+                    address: walletAddress
+                })
+                .done(function(response) {
+                    Swal.fire('Wallet Connected', 'Wallet Connected Successfully', 'success');
+                    location.reload();
+                })
+                .fail(function(jqXHR, textStatus, errorThrown) {
+                    Swal.fire('Wallet Not Connected', 'Try again later!', 'error');
+                });
+            } catch (error) {
+                Swal.fire('Connection Failed', 'Could not connect to the wallet.', 'error');
+                console.error("Error connecting wallet", error);
+            }
+        }
+
+        connectWalletButton.on('click', async function () {
+            if (window.solana && window.solana.isPhantom) {
+                await connectToPhantom();
+            } else {
+                Swal.fire({
+                    title: 'Phantom Wallet Not Found',
+                    text: 'Please install Phantom Wallet to connect to Solana.',
+                    icon: 'warning',
+                    confirmButtonText: 'Get Phantom Wallet',
+                    showCancelButton: true,
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.open('https://phantom.app/', '_blank');
+                    }
+                });
+            }
+        });
+
+        disconnectWalletButton.on('click', function () {
+            walletAddressElement.text("");
+            connectWalletButton.removeClass('d-none');
+            disconnectWalletButton.addClass('d-none');
+        });
+    });
+</script>
+
+
+<!-- <script>
+    $(document).ready(function () {
+        const walletAddressElement = $('#walletAddress');
+        const connectWalletButton = $('#connectWalletButton');
+        const disconnectWalletButton = $('#disconnectWalletButton');
+
+        async function connectToWallet(walletName) {
+            try {
+                let walletAddress = null;
+
+                if (walletName === 'Phantom' && window.solana && window.solana.isPhantom) {
+                    // Connect to Phantom Wallet
+                    const resp = await window.solana.connect();
+                    walletAddress = resp.publicKey.toString();
+                } else if (walletName === 'Solflare' && window.solflare && window.solflare.isSolflare) {
+                    // Connect to Solflare Wallet
+                    const resp = await window.solflare.connect();
+                    walletAddress = resp.publicKey.toString();
+                } else if (walletName === 'Ledger') {
+                    // Connect to Ledger Wallet
+                    // (This is just an example. You would need additional setup for Ledger hardware wallet)
+                    alert("Ledger wallet is not directly supported in browser. Use hardware wallet interface.");
+                    return;
+                } else if (walletName === 'Atomic Wallet') {
+                    // Connect to Atomic Wallet
+                    // (Assumes wallet provides web3 support or API to interact with Solana)
+                    alert("Atomic Wallet connection is not yet supported in this demo.");
+                    return;
+                }
+
+                if (walletAddress) {
+                    walletAddressElement.text("Connected Wallet: " + walletAddress);
+                    connectWalletButton.addClass('d-none');
+                    disconnectWalletButton.removeClass('d-none');
+
+                    // Send wallet address to your server
+                    $.post("connect_wallet_address", {
+                        type: walletName,
+                        address: walletAddress
+                    })
+                    .done(function(response) {
+                        Swal.fire('Wallet Connected', 'Wallet Connected Successfully', 'success');
+                        location.reload();
+                    })
+                    .fail(function(jqXHR, textStatus, errorThrown) {
+                        Swal.fire('Wallet Not Connected', 'Try again later!', 'error');
+                    });
+                }
+
+            } catch (error) {
+                Swal.fire('Connection Failed', 'Could not connect to the wallet.', 'error');
+                console.error("Error connecting wallet", error);
+            }
+        }
+
+        connectWalletButton.on('click', async function () {
+            // Show wallet selection popup
+            const { value: selectedWalletName } = await Swal.fire({
+                title: 'Select a Solana Wallet',
+                input: 'select',
+                inputOptions: {
+                    'Phantom': 'Phantom Wallet',
+                    'Solflare': 'Solflare Wallet',
+                    'Ledger': 'Ledger Hardware Wallet',
+                    'Atomic Wallet': 'Atomic Wallet'
+                },
+                inputPlaceholder: 'Select your wallet',
+                showCancelButton: true
+            });
+
+            if (selectedWalletName) {
+                await connectToWallet(selectedWalletName);
+            }
+        });
+
+        disconnectWalletButton.on('click', function () {
+            walletAddressElement.text("");
+            connectWalletButton.removeClass('d-none');
+            disconnectWalletButton.addClass('d-none');
+        });
+    });
+</script> -->
+
+
+    
+
 </body>
 
 <!-- Mirrored from iko.themegenix.net/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Nov 2024 11:35:51 GMT -->
