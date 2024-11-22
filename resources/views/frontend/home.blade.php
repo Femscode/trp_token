@@ -1001,13 +1001,6 @@
 </div>
 
 <style>
-*,
-*::before,
-*::after {
-    padding: 0;
-    margin: 0 auto;
-    box-sizing: border-box;
-}
 
 
 
