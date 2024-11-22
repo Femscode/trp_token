@@ -1526,7 +1526,7 @@
 <script src="https://unpkg.com/@solana/web3.js@1.70.0/lib/index.iife.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> For SweetAlert
 
-<script>
+<!-- <script>
     $(document).ready(function () {
         const walletAddressElement = $('#walletAddress');
         const connectWalletButton = $('#connectWalletButton');
@@ -1588,10 +1588,10 @@
             disconnectWalletButton.addClass('d-none');
         });
     });
-</script>
+</script> -->
 
 
-<!-- <script>
+<script>
     $(document).ready(function () {
         const walletAddressElement = $('#walletAddress');
         const connectWalletButton = $('#connectWalletButton');
@@ -1672,7 +1672,7 @@
             disconnectWalletButton.addClass('d-none');
         });
     });
-</script> -->
+</script>
 
 
     
