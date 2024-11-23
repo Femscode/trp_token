@@ -1964,11 +1964,18 @@
                         <div class="elementor-widget-container">
                             <div class='row m-2 p-2'>
                                 <div class='col-md-6'>
-                                    <img src='assets/images/squirrel.png' style='height:300px' />
+                                        <div class="elementor-element elementor-element-ef75eed alltuchtopdown elementor-widget elementor-widget-image" data-id="ef75eed" data-element_type="widget" data-widget_type="image.default">
+                                            <div class="elementor-widget-container">
+                                                <img fetchpriority="high" decoding="async" width="400" height="398" src="assets/images/squirrel.png" class="attachment-full size-full wp-image-179" alt="" srcset="assets/images/squirrel.png 400w, assets/images/squirrel.png 300w, assets/images/squirrel.png 150w" sizes="(max-width: 400px) 100vw, 400px" />
+                                                <!-- <img fetchpriority="high" decoding="async" width="400" height="398" src="wp-content/uploads/2024/03/roket.png" class="attachment-full size-full wp-image-179" alt="" srcset="https://iko.themegenix.net/wp-content/uploads/2024/03/roket.png 400w, https://iko.themegenix.net/wp-content/uploads/2024/03/roket-300x300.png 300w, https://iko.themegenix.net/wp-content/uploads/2024/03/roket-150x150.png 150w" sizes="(max-width: 400px) 100vw, 400px" /> -->
+                                            </div>
+                                        </div>
+                                   
+                                   
 
                                 </div>
                                 <div class='col-md-6'>
-                                <span class='text-white'>$100,000 worth of $TRP to be won from staking and pools in  the TRP gaming platform. <br> Listing plans and schedule to be made known soon!!</span>
+                                    <span class='text-white'>$100,000 worth of $TRP to be won from staking and pools in the TRP gaming platform. <br> Listing plans and schedule to be made known soon!!</span>
                                 </div>
                             </div>
 
