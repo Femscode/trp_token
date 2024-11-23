@@ -1002,7 +1002,7 @@
                                                             <a class="btn1 btn btn-dark" target='_blank' href="https://raydium.io/swap/?inputMint=sol&outputMint=3xrGhsbQhoTG6pL23zr2ogpMuEZjHGDuMD1tAQ8mbf1W">Buy TRP</a>
                                                         </li>
                                                         <li class="header-login">
-                                                            <a class="btn2" target='_blank' href="/connect_wallet">Connect Wallet</a>
+                                                            <a class="btn2" disabled target='_blank' >Stake TRP (Coming soon)</a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -1093,8 +1093,8 @@
                                     <div class="elementor-widget-container">
 
 
-                                        <a href="/connect_wallet" target="_blank" rel="nofollow" class="btn btn2 show-arrow">
-                                            Connect Wallet </a>
+                                        <a disabled target="_blank" rel="nofollow" class="btn btn-secondary">
+                                            Stake TRP (Coming soon)</a>
 
                                     </div>
                                 </div>
@@ -1955,7 +1955,7 @@
                         <div class="e-con-inner">
                             <div class="elementor-element elementor-element-033d538 elementor-widget elementor-widget-heading" data-id="033d538" data-element_type="widget" data-widget_type="heading.default">
                                 <div class="elementor-widget-container">
-                                    <h2 class="elementor-heading-title elementor-size-default">$100,000 worth of $TRP to be won.</h2>
+                                    <h2 class="elementor-heading-title elementor-size-default">$100,000 worth of <span style='color:#ebab21;font-size:50px'>$TRP</span> to be won.🤑🤑</h2>
                                 </div>
                             </div>
                         </div>
