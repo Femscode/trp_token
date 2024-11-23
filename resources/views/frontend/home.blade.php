@@ -1962,7 +1962,7 @@
                     </div>
                     <div class="elementor-element elementor-element-ed1e23b elementor-widget elementor-widget-tg-partners" data-id="ed1e23b" data-element_type="widget" data-widget_type="tg-partners.default">
                         <div class="elementor-widget-container">
-                            <div class='row'>
+                            <div class='row m-2 p-2'>
                                 <div class='col-md-6'>
                                     <img src='assets/images/squirrel.png' style='height:300px' />
 
