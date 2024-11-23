@@ -1955,19 +1955,24 @@
                         <div class="e-con-inner">
                             <div class="elementor-element elementor-element-033d538 elementor-widget elementor-widget-heading" data-id="033d538" data-element_type="widget" data-widget_type="heading.default">
                                 <div class="elementor-widget-container">
-                                    <h2 class="elementor-heading-title elementor-size-default">Soon to be listed on notable exchanges.</h2>
+                                    <h2 class="elementor-heading-title elementor-size-default">$100,000 worth of $TRP to be won.</h2>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="elementor-element elementor-element-ed1e23b elementor-widget elementor-widget-tg-partners" data-id="ed1e23b" data-element_type="widget" data-widget_type="tg-partners.default">
                         <div class="elementor-widget-container">
+                            <div class='row'>
+                                <div class='col-md-6'>
+                                    <img src='assets/images/squirrel.png' style='height:300px' />
 
+                                </div>
+                                <div class='col-md-6'>
+                                <span class='text-white'>$100,000 worth of $TRP to be won from staking and pools in  the TRP gaming platform. <br> Listing plans and schedule to be made known soon!!</span>
+                                </div>
+                            </div>
 
-
-
-
-                            <div class="slider-area">
+                            <!-- <div class="slider-area">
                                 <div class="row g-0 partner-slider1">
                                     <div class="col-lg-4">
                                         <div class="partner-card">
@@ -2010,7 +2015,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
 
 
                         </div>
